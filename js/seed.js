@@ -3,18 +3,18 @@ import { uid, todayStr } from "./utils.js";
 // Kategori default bilingual + budget
 export function defaultCategories() {
   return [
-    { id: "c_makanan", name_id: "Makanan", name_en: "Food", type: "expense", icon: "food", color: "#ef4444", budget: 1500000 },
-    { id: "c_transport", name_id: "Transport", name_en: "Transport", type: "expense", icon: "transport", color: "#f59e0b", budget: 800000 },
-    { id: "c_belanja", name_id: "Belanja", name_en: "Shopping", type: "expense", icon: "shopping", color: "#8b5cf6", budget: 1000000 },
-    { id: "c_tagihan", name_id: "Tagihan", name_en: "Bills", type: "expense", icon: "bills", color: "#0284c7", budget: 1200000 },
-    { id: "c_kesehatan", name_id: "Kesehatan", name_en: "Health", type: "expense", icon: "health", color: "#10b981", budget: 500000 },
-    { id: "c_edukasi", name_id: "Edukasi", name_en: "Education", type: "expense", icon: "education", color: "#0ea5e9", budget: 600000 },
-    { id: "c_hiburan", name_id: "Hiburan", name_en: "Entertainment", type: "expense", icon: "entertainment", color: "#ec4899", budget: 500000 },
-    { id: "c_invest", name_id: "Investasi", name_en: "Investment", type: "expense", icon: "investment", color: "#14b8a6", budget: 1000000 },
-    { id: "c_lain", name_id: "Lainnya", name_en: "Others", type: "expense", icon: "others", color: "#64748b", budget: 400000 },
-    { id: "c_gaji", name_id: "Gaji", name_en: "Salary", type: "income", icon: "salary", color: "#22c55e", budget: 0 },
-    { id: "c_freelance", name_id: "Freelance", name_en: "Freelance", type: "income", icon: "freelance", color: "#16a34a", budget: 0 },
-    { id: "c_bonus", name_id: "Bonus", name_en: "Bonus", type: "income", icon: "bonus", color: "#84cc16", budget: 0 },
+    { id: "c_makanan", name_id: "Makanan", name_en: "Food", type: "expense", icon: "food", color: "#a15c5c", budget: 1500000 },
+    { id: "c_transport", name_id: "Transport", name_en: "Transport", type: "expense", icon: "transport", color: "#8a6d2b", budget: 800000 },
+    { id: "c_belanja", name_id: "Belanja", name_en: "Shopping", type: "expense", icon: "shopping", color: "#7a6a8a", budget: 1000000 },
+    { id: "c_tagihan", name_id: "Tagihan", name_en: "Bills", type: "expense", icon: "bills", color: "#3e6fa3", budget: 1200000 },
+    { id: "c_kesehatan", name_id: "Kesehatan", name_en: "Health", type: "expense", icon: "health", color: "#2f7d4f", budget: 500000 },
+    { id: "c_edukasi", name_id: "Edukasi", name_en: "Education", type: "expense", icon: "education", color: "#4a7c8c", budget: 600000 },
+    { id: "c_hiburan", name_id: "Hiburan", name_en: "Entertainment", type: "expense", icon: "entertainment", color: "#9a6b4f", budget: 500000 },
+    { id: "c_invest", name_id: "Investasi", name_en: "Investment", type: "expense", icon: "investment", color: "#5b8c7a", budget: 1000000 },
+    { id: "c_lain", name_id: "Lainnya", name_en: "Others", type: "expense", icon: "others", color: "#6b7280", budget: 400000 },
+    { id: "c_gaji", name_id: "Gaji", name_en: "Salary", type: "income", icon: "salary", color: "#2f7d4f", budget: 0 },
+    { id: "c_freelance", name_id: "Freelance", name_en: "Freelance", type: "income", icon: "freelance", color: "#3e6e4e", budget: 0 },
+    { id: "c_bonus", name_id: "Bonus", name_en: "Bonus", type: "income", icon: "bonus", color: "#8a6d2b", budget: 0 },
   ];
 }
 
@@ -65,9 +65,9 @@ export function getSeedData() {
     T("income", 500000, d(1), "c_freelance", "Jasa ketik", "Cash"),
   ];
   const goals = [
-    { id: uid("goal"), name: "Laptop baru", targetAmount: 12000000, savedAmount: 3500000, deadline: "2027-03-01", color: "#4f46e5", history: [{ date: d(20), amount: 1000000 }, { date: d(5), amount: 500000 }] },
-    { id: uid("goal"), name: "Dana darurat", targetAmount: 20000000, savedAmount: 8000000, deadline: "2027-12-31", color: "#16a34a", history: [{ date: d(40), amount: 2000000 }] },
-    { id: uid("goal"), name: "Liburan Bali", targetAmount: 5000000, savedAmount: 1250000, deadline: "2026-12-20", color: "#ec4899", history: [{ date: d(2), amount: 250000 }] },
+    { id: uid("goal"), name: "Laptop baru", targetAmount: 12000000, savedAmount: 3500000, deadline: "2027-03-01", color: "#3e6fa3", history: [{ date: d(20), amount: 1000000 }, { date: d(5), amount: 500000 }] },
+    { id: uid("goal"), name: "Dana darurat", targetAmount: 20000000, savedAmount: 8000000, deadline: "2027-12-31", color: "#2f7d4f", history: [{ date: d(40), amount: 2000000 }] },
+    { id: uid("goal"), name: "Liburan Bali", targetAmount: 5000000, savedAmount: 1250000, deadline: "2026-12-20", color: "#8a6d2b", history: [{ date: d(2), amount: 250000 }] },
   ];
   return {
     transactions, categories, goals, loans: defaultLoans(),

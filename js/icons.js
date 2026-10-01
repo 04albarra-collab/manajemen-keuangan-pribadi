@@ -61,26 +61,14 @@ export function icon(name, size = 18) {
   return `<svg class="icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${PATHS[key] || PATHS.others}</svg>`;
 }
 
-// Badge kategori: gradien warna + ikon putih + shadow (lebih "hidup")
-export function shade(hex, amt = -25) {
-  // gelapkan/terangkan hex #rrggbb sebesar amt
-  const n = hex.replace("#", "");
-  if (n.length !== 6) return hex;
-  const c = [0, 2, 4].map((i) => {
-    const v = Math.min(255, Math.max(0, parseInt(n.slice(i, i + 2), 16) + amt));
-    return v.toString(16).padStart(2, "0");
-  });
-  return `#${c.join("")}`;
-}
-
-export function catBadge(cat, size = 30) {
+// Badge kategori: flat solid, tanpa gradien/shadow
+export function catBadge(cat, size = 28) {
   const c = cat || {};
-  const bg = c.color || "#64748b";
-  const deep = shade(bg, -38);
-  return `<span class="cat-badge" style="--badge-bg:${bg};--badge-deep:${deep};width:${size}px;height:${size}px" title="${(c.name_id || c.name_en || "").replace(/"/g, "")}">${icon(c.icon, Math.round(size * 0.55))}</span>`;
+  const bg = c.color || "#6b7280";
+  return `<span class="cat-badge" style="--badge-bg:${bg};width:${size}px;height:${size}px" title="${(c.name_id || c.name_en || "").replace(/"/g, "")}">${icon(c.icon, Math.round(size * 0.55))}</span>`;
 }
 
-// Chip ikon generik: kotak rounded dengan tint lembut + ikon berwarna
-export function iconChip(name, color = "#4f46e5", size = 38, icSize = 20) {
-  return `<span class="icon-chip" style="--chip:${color};width:${size}px;height:${size}px">${icon(name, icSize)}</span>`;
+// Chip ikon generik: netral monokrom (param warna diabaikan agar UI konsisten)
+export function iconChip(name, _color, size = 34, icSize = 17) {
+  return `<span class="icon-chip" style="width:${size}px;height:${size}px">${icon(name, icSize)}</span>`;
 }
