@@ -1,0 +1,6 @@
+@media print {
+  .sidebar, .topbar, .bottom-nav, .footer, .toolbar, .no-print { display: none !important; }
+  body { background: #fff; color: #000; }
+  .card { box-shadow: none; border: 1px solid #999; break-inside: avoid; }
+  .content { max-width: 100%; padding: 0; }
+}
